@@ -6,10 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Table;
 import org.hibernate.validator.constraints.Email;
-import org.springframework.data.annotation.Id;
-
 
 import java.util.List;
+
 
 @Entity
 @Data
@@ -19,6 +18,7 @@ public class User{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String firstname;
     private String lastname;
 
@@ -26,11 +26,9 @@ public class User{
 
     private String password;
 
-    @Email(message="{errors.invalid_email}")
+
     private String email;
-    private int points;
-    private boolean isAproved;
-    private boolean isFollowing;
+
 
 
     @Embedded
@@ -64,6 +62,8 @@ public class User{
 
     @OneToMany(mappedBy = "seller")
     private List<Product> products;
+
+
 
 
 }

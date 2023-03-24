@@ -14,7 +14,9 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
-        <datasource-mapping />
+        <datasource-mapping>
+          <factory-entry name="Kabbie-e-Commerce2" />
+        </datasource-mapping>
         <naming-strategy-map />
       </configuration>
     </facet>
@@ -61,6 +63,7 @@
     <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:2.0.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:6.0.6" level="project" />
+    <orderEntry type="library" name="Maven: org.modelmapper:modelmapper:3.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-security:3.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:3.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:3.0.4" level="project" />
