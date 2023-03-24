@@ -1,11 +1,17 @@
 package com.kabbeeecommercebackend.domain;
 
+
+
+
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import org.hibernate.annotations.Table;
 import org.hibernate.validator.constraints.Email;
+
 
 import java.util.List;
 
@@ -15,9 +21,11 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
 
     private String firstname;
     private String lastname;
@@ -63,7 +71,10 @@ public class User{
     @OneToMany(mappedBy = "seller")
     private List<Product> products;
 
+6h
 
 
+
+}
 
 }
