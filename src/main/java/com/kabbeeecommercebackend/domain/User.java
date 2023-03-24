@@ -8,7 +8,13 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import org.hibernate.annotations.Table;
+import org.hibernate.validator.constraints.Email;
+
+
 import java.util.List;
+
 
 @Entity
 @Data
@@ -17,8 +23,9 @@ import java.util.List;
 public class User{
 
     @Id
-    @GeneratedValue
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
 
     private String firstname;
     private String lastname;
@@ -29,6 +36,7 @@ public class User{
 
 
     private String email;
+
 
 
     @Embedded
@@ -62,5 +70,11 @@ public class User{
 
     @OneToMany(mappedBy = "seller")
     private List<Product> products;
+
+6h
+
+
+
+}
 
 }
