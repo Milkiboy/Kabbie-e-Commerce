@@ -9,4 +9,8 @@ public interface UserService {
 
     UserDto getUserById(long id);
 
+    void addUser(UserDto userDto);
+
+
+
 }

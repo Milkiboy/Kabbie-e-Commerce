@@ -4,24 +4,21 @@ import com.kabbeeecommercebackend.Service.UserService;
 import com.kabbeeecommercebackend.domain.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/users")
 public class UserController {
-    @Autowired
-    UserService userService;
+
+    private final UserService userService;
 
 
     @GetMapping("/name")
-    public UserDto getUserByUsername(@RequestParam("username")String username){
-        return userService.getUserByUsername(username);
+//    public String getUserByUsername(@RequestParam("username")String username){
+//        return userService.getUserByUsername(username);
+    public String getUserByUsername(){
+        return "miki";
     }
 
 
@@ -29,6 +26,10 @@ public class UserController {
     @GetMapping("/{id}")
     public UserDto getUserById(@PathVariable long id) {
         return userService.getUserById(id);
+    }
+    @PostMapping
+    public void addUser(@RequestBody UserDto userDto){
+        userService.addUser(userDto);
     }
 
 }
