@@ -1,10 +1,12 @@
 package com.kabbeeecommercebackend.domain.dto;
 
-import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.Column;
+import javax.validation.constraints.NotNull;
 
 
 @Data

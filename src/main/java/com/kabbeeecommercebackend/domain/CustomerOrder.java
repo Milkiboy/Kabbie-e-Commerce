@@ -2,13 +2,14 @@ package com.kabbeeecommercebackend.domain;
 
 import com.kabbeeecommercebackend.enums.OrderStatus;
 
-import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @AllArgsConstructor

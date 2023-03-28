@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     private final UserService userService;
-
-
     @GetMapping("/name")
 //    public String getUserByUsername(@RequestParam("username")String username){
 //        return userService.getUserByUsername(username);
